@@ -39,9 +39,9 @@ class SongsController < ApplicationController
 
     artist = Artist.find_or_create_by(:name => params[:artist])
     artist.update(:name => params[:artist])
-    artist.songs << @song 
+    artist.songs << @song
     artist.save
-    
+
 
     @song.save
 
